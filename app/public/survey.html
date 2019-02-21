@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Survey Questions</h2>
+  
+  <div class="question-container">
+      <h4>Question 1</h4>
+      <p>Your mind is always buzzing with unexplored ideas and plans.</p>
+      <select class="question" id="question1">
+        <option value="" selected disabled hidden>Select an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+  </div>
+
+  <div class="question-container">
+    <h4>Question 2</h4>
+    <p>Generally speaking, you rely more on your experience than your imagination.</p>
+    <select class="question" id="question2">
+        <option value="" selected disabled hidden>Select an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+  </div>
+
+  <div class="question-container">
+    <h4>Question 3</h4>
+    <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
+    <select class="question" id="question3">
+        <option value="" selected disabled hidden>Select an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+  </div>
+
+  <div class="question-container">
+    <h4>Question 4</h4>
+    <p>You rarely do something just out of sheer curiosity.</p>
+    <select class="question" id="question4">
+        <option value="" selected disabled hidden>Select an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+  </div>
+
+  <div class="question-container">
+    <h4>Question 5</h4>
+    <p>People can rarely upset you.</p>
+    <select class="question" id="question5">
+        <option value="" selected disabled hidden>Select an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+  </div>
+
+  <div class="question-container">
+    <h4>Question 6</h4>
+    <p>It is often difficult for you to relate to other people’s feelings.</p>
+    <select class="question" id="question6">
+        <option value="" selected disabled hidden>Select an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+  </div>
+
+  <div class="question-container">
+    <h4>Question 7</h4>
+    <p>In a discussion, truth should be more important than people’s sensitivities.</p>
+    <select class="question" id="question7">
+        <option value="" selected disabled hidden>Select an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+  </div>
+
+  <div class="question-container">
+    <h4>Question 8</h4>
+    <p>You rarely get carried away by fantasies and ideas.</p>
+    <select class="question" id="question8">
+        <option value="" selected disabled hidden>Select an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+  </div>
+
+  <div class="question-container">
+    <h4>Question 9</h4>
+    <p>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</p>
+    <select class="question" id="question9">
+        <option value="" selected disabled hidden>Select an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+  </div>
+
+  <div class="question-container">
+    <h4>Question 10</h4>
+    <p>You feel more energetic after spending time with a group of people.</p>
+    <select class="question" id="question10">
+        <option value="" selected disabled hidden>Select an option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+  </div>
+
+  <div>
+    <button type="submit" class="btn btn-primary submit">Submit</button>
+  </div>
+
+
+<script type="text/javascript">
+
+    $(".submit").on("click", function(event) {
+        event.preventDefault();
+        
+        var i = 1;
+        document.querySelectorAll('.question').forEach(function(button) {
+            var answer = document.getElementById("question"+i).value;
+            if (answer) {
+                console.log("there is value");
+            }
+            else {
+                console.log("blank value");
+            }
+            i++;
+        });
+
+
+    })
+
+
+</script>
+
+</body>
+</html>
