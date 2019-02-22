@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // require router files to define routes
-require("./app/routing/apiRoutes")(app);
+// require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
 // start the server
