@@ -17,7 +17,7 @@ var friendsArray = [
     },
     {
         "name":"Paul McCartney",
-        "photo":"",
+        "photo": "",
         "scores":[
             1,
             3,
